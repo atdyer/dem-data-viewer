@@ -54,6 +54,7 @@ hide_details();
 var show_layer = function ( layer ) {
 
     if ( popup ) popup.remove();
+    hide_details();
 
     for ( var i=0; i<layers.length; ++i ) {
         var l = layers[i];
@@ -103,8 +104,6 @@ map.on( 'load', function () {
             .setLngLat( feature.geometry.coordinates )
             .setHTML( feature.properties.filename )
             .addTo( map );
-
-        popup.on( 'close', hide_details );
 
     });
 
