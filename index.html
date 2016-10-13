@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DEM Data Viewer</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+
+    <script src="jquery-3.1.1.min.js"></script>
+
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.25.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.25.1/mapbox-gl.css' rel='stylesheet' />
+    <link href="index.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="info-window">
+        <div class="info-header">
+            Choose Dataset
+        </div>
+        <div id="usace" class="info-list-item">
+            2010 USACE NCMP 2m
+        </div>
+        <div id="ncfmp" class="info-list-item">
+            2014 NCFMP 1.5m
+        </div>
+        <div id="noaa" class="info-list-item active">
+            2014 NOAA Topobathy 1m
+        </div>
+        <div class="info-section-end"></div>
+        <div class="info-header">
+            Current Selection
+        </div>
+        <div id="info-placeholder" class="info-placeholder">
+            None.
+        </div>
+        <div id="current-details" class="info-details">
+            <div class="info-details-item">
+                <div class="key">Parent Directory:</div>
+                <div id="parent-directory" class="value"></div>
+            </div>
+            <div class="info-details-item">
+                <div class="key">Directory:</div>
+                <div id="directory" class="value"></div>
+            </div>
+            <div class="info-details-item">
+                <div class="key">Filename:</div>
+                <div id="filename" class="value"></div>
+            </div>
+        </div>
+    </div>
+    <div id="map"></div>
+    <script src="index.js"></script>
+</body>
+</html>
